@@ -16,3 +16,5 @@ jQuery("form").submit(function() {
   // 7. Allow form to submit without reloading the page
   event.preventDefault();
 }) // END submit
+
+$("form").after("<button onClick='window.location.assign(\"https://decd.co/paraty-results\")'>View results</button>");
