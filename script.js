@@ -10,6 +10,7 @@ jQuery("form").submit(function() {
     success: function(result){
       // 6. Hide the form now the user has given us information in (and change the message).
       $("form").hide();
+      $("#resultsPreview").hide();
       $("section").append("<h2>Thank you for rating!</h2><h2><button onClick='location.reload()'>Rate another beer</button> <button onClick='window.location.assign(\"https://decd.co/paraty-results\")'>View results</button>");
     } // END success
   }); // END ajax
@@ -17,4 +18,4 @@ jQuery("form").submit(function() {
   event.preventDefault();
 }) // END submit
 
-$("form").after("<button onClick='window.location.assign(\"https://decd.co/paraty-results\")'>View results</button>");
+$("form").after("<button id='resultsPreview' onClick='window.location.assign(\"https://decd.co/paraty-results\")'>View results</button>");
